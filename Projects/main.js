@@ -25,6 +25,17 @@ const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, inval
 
 // Add your functions below:
 
+function findInvalidCards(arr){
+    let invalid = [];
+  arr.forEach(value =>  {
+      if(validateCred(arr)){
+  console.log(value);
+      } else {
+        console.log('hi');
+      }
+  });
+}
+
 function validateCred(cards){
     let arrays = [];
     cards.forEach((card , i) => {
@@ -41,11 +52,12 @@ function validateCred(cards){
  const sum = arrays.reduce((a ,b) => {
      return (a + b) % 10;
  } , 0);
-   console.log(sum === 0 ? true : false)
+  return sum === 0 ? true : false ;
 
 }
 
 validateCred(invalid2)
+findInvalidCards(valid1)
 
 
 
