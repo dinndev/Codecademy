@@ -26,14 +26,22 @@ const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, inval
 // Add your functions below:
 
 function findInvalidCards(arr){
+    let company = ''
     let invalid = [];
-  arr.forEach(value =>  {
-      if(validateCred(arr)){
-  console.log(value);
-      } else {
-        console.log('hi');
-      }
-  });
+ if(validateCred(arr)){
+  console.log('valid')
+ } else {
+  arr.forEach(v => invalid.push(v));
+ }
+ switch(invalid[0]){
+   case 3 : return `Amex ${invalid}`;
+   break;
+   case 4 : return `Visa ${invalid}`;
+   break;
+   case 5 : return `MaterCard ${invalid}`;
+   break;
+   case 6 : return `Discover ${invalid}`;
+ }
 }
 
 function validateCred(cards){
@@ -57,8 +65,7 @@ function validateCred(cards){
 }
 
 validateCred(invalid2)
-findInvalidCards(valid1)
-
+console.log(findInvalidCards(invalid1))
 
 
 
