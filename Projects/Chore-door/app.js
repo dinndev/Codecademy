@@ -1,11 +1,25 @@
-let doorImage1 = document.querySelector('#door1');
-let DoorPath = 'https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/robot.svg';
+let userName = "";
+let userQuestion = "";
+let eightBall = "";
+userName ? console.log(`Hello ,${userName}`) : console.log(`Hello`);
+const randomNumber = Math.round((Math.random() * 7));
 
-const doors = document.querySelector('.door-frame');
-const Adoors Array.from(doors)
- Adoors.forEach(door => {
-    door.addEventListener('click',changeImage(door))
-});
-function changeImage(door){
-  door.src = DoorPath;
+switch(randomNumber){
+ case  0 : eightBall = "It is certain";
+ break;
+  case  1 : eightBall = "It is decidedly so";
+ break;
+  case  2 : eightBall = "Reply hazy try again";
+ break;
+  case  3 : eightBall = "Cannot predict now";
+ break;
+  case  4 : eightBall = "Do not count on it";
+ break;
+  case  5 : eightBall = "My sources say no";
+ break;
+  case  6 : eightBall = "Outlook not so good";
+ break;
+  case  7 : eightBall = "Signs point to yes";
+ break;
 }
+console.log(eightBall);
