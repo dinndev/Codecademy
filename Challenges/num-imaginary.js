@@ -1,0 +1,1 @@
+const numImaginaryFriends = num => Math.round(num * .33);
