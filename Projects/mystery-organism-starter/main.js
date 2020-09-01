@@ -13,7 +13,19 @@ const mockUpStrand = () => {
   return newStrand;
 };
 
-console.log(returnRandBase())
+const pAequorFactory = (num ,dna) => {
+    return {
+      num ,
+      dna,
+      mutate() {
+        let mutates;
+        const rand = Math.floor(Math.random() * 15);
+        const base = this.dna[rand];
+         
+      }
+    }
+}
+console.log(pAequorFactory(1 ,mockUpStrand()).mutate());
 
 
 
