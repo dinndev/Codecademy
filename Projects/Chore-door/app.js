@@ -1,25 +1,18 @@
-let userName = "";
-let userQuestion = "";
-let eightBall = "";
-userName ? console.log(`Hello ,${userName}`) : console.log(`Hello`);
-const randomNumber = Math.round((Math.random() * 7));
+let doorImage1 = document.querySelector('#door1');
+let doorImage2 = document.querySelector('#door2');
+let doorImage3 = document.querySelector('#door3');
+const DoorPath = 'https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/robot.svg';
 
-switch(randomNumber){
- case  0 : eightBall = "It is certain";
- break;
-  case  1 : eightBall = "It is decidedly so";
- break;
-  case  2 : eightBall = "Reply hazy try again";
- break;
-  case  3 : eightBall = "Cannot predict now";
- break;
-  case  4 : eightBall = "Do not count on it";
- break;
-  case  5 : eightBall = "My sources say no";
- break;
-  case  6 : eightBall = "Outlook not so good";
- break;
-  case  7 : eightBall = "Signs point to yes";
- break;
+const beachDoorPath = 'https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/beach.svg';
+
+const spaceDoorPath = 'https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/space.svg';
+
+doorImage1.onclick =_=> {
+  doorImage1.src = DoorPath;
 }
-console.log(eightBall);
+doorImage2.onclick =_=> {
+  doorImage2.src = beachDoorPath;
+}
+doorImage3.onclick =_=> {
+  doorImage3.src = spaceDoorPath;
+}
