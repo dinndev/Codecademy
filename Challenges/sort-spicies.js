@@ -4,4 +4,5 @@ const speciesArray = [ {speciesName:'shark', numTeeth:50}, {speciesName:'dog', n
 const sortSpeciesByTeeth = arr => arr.sort((a ,b) => a.numTeeth - b.numTeeth);
 
 
-console.log(sortSpeciesByTeeth(speciesArray))
+console.log(sortSpeciesByTeeth(speciesArray));
+
